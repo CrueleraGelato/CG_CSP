@@ -6,5 +6,5 @@ while True:
         print("sorry that is not a name") 
     else: 
         break
-print(f"Hello {name}, that is a beautiful name") 
+print(f"Hello {name}, that is a beautiful name")
     
