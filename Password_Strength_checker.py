@@ -1,21 +1,19 @@
 # CG, Password strength checker 
 password = input("What is your password?").strip()
 
-character = "False"
+character = False
 
-Uppercase = "False"
+Uppercase = False
 
-lowercase = "False" 
+lowercase = False 
 
-number = "False" 
+number = False
 
-symbol = "false" 
+symbol = False 
 
 length = len(password)
 
 rules_met = True 
-
-symbols = "!@#$%^&*()"
 
 if len(password) >= 8: 
     length = True 
@@ -36,9 +34,12 @@ for letter in password:
          number = True 
 print(f"Your passwords Number: {number}")
 
-if letter in symbols:
-         symbols = True 
-print(f"Your password has symbols: {symbols}")
+symbols = ("!@#$%^&*")
+
+for letter in password: 
+    if letter in symbol: 
+        symbol = True 
+print(f"Your password has symbols: {symbol}")
 
 if length is True: 
      requirement_met=1

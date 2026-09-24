@@ -1,0 +1,23 @@
+# CG, Loop Notes 
+import random 
+# code that will repeat over and over again 
+count = 1 
+
+while count <= 10: 
+    print(count) 
+    count += 1
+
+goose = random.randint(1,10)
+ducks = 1
+
+while True: 
+    print("duck") 
+    if ducks == goose: 
+        break 
+    ducks += 1 
+print("GOOSE!!!!")
+
+
+
+
+siblings = ["Aprilia","Rossi"]
