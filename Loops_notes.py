@@ -17,7 +17,22 @@ while True:
     ducks += 1 
 print("GOOSE!!!!")
 
+siblings = ["Aprilia", "Rossi"]
 
+print(siblings[1]) 
+print(siblings) 
+#add to th list 
+item = input("what needs to be added to the list:")
+siblings.append("Leonardo")
+siblings.insert(1,"Carrera")
+#remove from list 
+print(siblings)
+print(siblings.pop(1)) 
+print(siblings) 
 
+# For loops 
+for number in range(1,11,2): 
+    print(number)
 
-siblings = ["Aprilia","Rossi"]
+for sibling in siblings: 
+    print(sibling + " Galata") 
