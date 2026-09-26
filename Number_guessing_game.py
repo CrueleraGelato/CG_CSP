@@ -1,20 +1,27 @@
 # CG, Number Guessing Game
-the_number = 79
+import random
 
-print("I am thinking of a number between 1 and 100. You have 6 tries to get it") 
+# Secret number range: 1 to 100
+# Player gets 6 attempts
+secret_number = random.randint(1, 100)
+max_attempts = 6
 
-Guess2 = int(input("What is your second Guess?"))
+print("I'm thinking of a number between 1 and 100. You have 6 tries to guess it!")
 
-Guess3 =  int(input("What is your third Guess?"))
+guesses_used = 0
 
-Guess4 =  int(input("What is your fourth Guess?"))
+for guess_number in range(1, max_attempts + 1):
+    guess = int(input("Guess #" + str(guess_number) + ": "))
 
-Guess5 =  int(input("What is your five Guess?"))
+    guesses_used += 1
 
-Guess6 =  int(input("What is your six Guess?"))
+    if guess > secret_number:
+        print("Too high!")
+    elif guess < secret_number:
+        print("Too low!")
+    else:
+        print("Correct! You guessed it in " + str(guesses_used) + " tries!")
+        break
 
-while True: 
-    Guess1 = int(input("What is your first Guess?"))
-    if Guess1 > the_number: 
-        print("Too High!") 
-    elif Guess1 < the_number: 
+else:
+    print("You're out of guesses! The number was " + str(secret_number) + ".")
