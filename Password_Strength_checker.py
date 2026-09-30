@@ -2,39 +2,67 @@
 
 password = input("What is your password?").strip()
 
-character = "false"
+character = False
 
-Uppercase = "False"
+Uppercase = False
 
-lowercase = "False" 
+lowercase = False 
 
-number = "False" 
+number = False
 
-symbol = "false" 
+symbol = False 
 
 length = len(password)
+
+rules_met = True 
 
 if len(password) >= 8: 
     length = True 
 print(f"At least 8 characters: {length}")
 
 for letter in password: 
-    if Uppercase.isupper(): 
+    if letter.isupper(): 
          Uppercase = True 
 print(f"Your passwords Uppercase: {Uppercase}")
 
 for letter in password: 
-    if lowercase.islower():
+    if letter.islower():
          lowercase = True 
 print(f"Your passwords Lowercase: {lowercase}")
 
 for letter in password: 
-    if number.isnumeric():
+    if letter.isnumeric():
          number = True 
 print(f"Your passwords Number: {number}")
 
-if letter in "!@#$%^&*()_+=[]|:;'<.,>":
-         lowercase = True 
-print(f"Your passwords Lowercase: {lowercase}")
+symbols = ("!@#$%^&*")
+
+for letter in password: 
+    if letter in symbol: 
+        symbol = True 
+print(f"Your password has symbols: {symbol}")
+
+if length is True: 
+     requirement_met=1
+
+if Uppercase: 
+     rules_met+= 1 
+if lowercase: 
+     rules_met+=1 
+
+     
+     
+
+     
+
+
+     
+     
+
+
+
+     
+
+
 
 if length = True 
