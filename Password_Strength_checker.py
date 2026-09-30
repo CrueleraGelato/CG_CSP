@@ -1,4 +1,5 @@
 # CG, Password strength checker 
+
 password = input("What is your password?").strip()
 
 character = "false"
@@ -32,13 +33,8 @@ for letter in password:
          number = True 
 print(f"Your passwords Number: {number}")
 
-if letter in ("!@#$%^&*()_+={}[]|:;"'<.,>)
+if letter in "!@#$%^&*()_+=[]|:;'<.,>":
          lowercase = True 
 print(f"Your passwords Lowercase: {lowercase}")
 
-
-
-
-
-
-
+if length = True 
