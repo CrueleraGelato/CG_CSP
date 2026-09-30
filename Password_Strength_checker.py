@@ -1,4 +1,5 @@
 # CG, Password strength checker 
+
 password = input("What is your password?").strip()
 
 character = False
@@ -64,9 +65,4 @@ if lowercase:
 
 
 
-
-
-
-
-
-
+if length = True 
