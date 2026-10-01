@@ -1,10 +1,34 @@
 # CG, Cipher assignment 
-e_or_d = ("Would you like to encrypt or decrypt a message?")
-user_word = (input("Enter your message for encryption:"))
-enter_shift = input("Enter a shift amount:")
-for letter in user_word: 
-    if letter.isnumaric: 
-        ord(letter)
-def ceaser_cipher(first_letter):
-    return (ord(first_letter))
+choice = input("Would you like to encrypt or decrypt a message?").strip()
+message = input("Enter your message:").strip()
+shift = int(input("Enter shift amount:").strip())
+
+
+def caesar_shift(message,shift):
+   result = ""
+   for char in message:
+       if char.isupper():
+                   result += chr((ord(char)- ord ("A") + shift)% 26 + ord("A"))
+       elif char.islower():
+                   result += chr((ord(char)- ord ("a") + shift)% 26 + ord("a"))
+       else:
+               result += char
+   return result
+
+
+if choice == "E":
+   result = caesar_shift(message, shift)
+   print(f"Your encrypted message is: {result}")
+
+
+elif choice == "D":
+   result = caesar_shift(message, -shift)
+   print(f"Your decrypted message is: {result}")
+
+
+
+
+
+
+
 
